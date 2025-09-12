@@ -1,0 +1,264 @@
+/* General body style with gradient background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #eee;
+    margin: 0;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation styling */
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* About section styling */
+.content#about {
+    max-width: 1000px;
+    margin: 80px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 60px 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content#about:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.content#about h2 {
+    font-size: 2.8rem;
+    color: #007bff;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.content#about p {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .content#about {
+        padding: 40px 20px;
+        margin: 60px 15px;
+    }
+
+    .content#about h2 {
+        font-size: 2.4rem;
+    }
+
+    .content#about p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content#about {
+        padding: 30px 15px;
+        margin: 40px 10px;
+    }
+
+    .content#about h2 {
+        font-size: 2rem;
+    }
+
+    .content#about p {
+        font-size: 1rem;
+    }
+}
+
+/* Product container styling */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual product styling */
+.product {
+    background: #2c2c2c;
+    border-radius: 12px;
+    width: 260px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Image styling */
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.product img:hover {
+    transform: scale(1.05);
+}
+
+/* Button styling */
+.buy-btn {
+    background: linear-gradient(45deg, #1b5e20, #4caf50);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.buy-btn:hover {
+    background: linear-gradient(45deg, #4caf50, #66bb6a);
+    transform: scale(1.05);
+}
+
+#orderForm {
+   
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none !important; /* ज़बरदस्ती shadow हटाने के लिए */
+    z-index: 1000;
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Form container styling */
+.form-container {
+    background: linear-gradient(135deg, #3a3a3a, #1f1f1f);
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.form-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.form-container p {
+    color: #ccc;
+    margin: 5px 0;
+}
+
+/* Input styling */
+.form-container input, .form-container textarea, .form-container select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a4a4a;
+    color: #eee;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+.form-container input:focus, .form-container textarea:focus, .form-container select:focus {
+    background-color: #5c5c5c;
+    outline: none;
+}
+
+.submit-btn, .cancel-btn {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-btn {
+    background: linear-gradient(135deg, #F44336, #C62828);
+}
+
+.cancel-btn:hover {
+    background: linear-gradient(135deg, #EF5350, #B71C1C);
+}
+/* Footer styling */
+footer {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+.logo-container {
+    display: flex;
+    align-items: left;
+    justify-content:center;
+    gap: 10px;
+}
+.logo {
+    height: 50px;
+    width: auto;
+}
+#searchInput {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
